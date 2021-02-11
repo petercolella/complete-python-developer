@@ -24,3 +24,15 @@ print(9 % 4)
 #math functions
 print(round(3.9))
 print(abs(-20))
+
+#operator precedence
+print(20 - 3 * 4)
+
+# ()
+# **
+# * /
+# + -
+
+complex
+print(bin(5))
+print(int('0b101', 2))
