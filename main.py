@@ -75,3 +75,45 @@ print(c)
 weather = '\t It\'s \'kind of\' sunny \n have a good day!'
 
 print(weather)
+
+# Formatted Strings
+
+name = 'Johnny'
+age = 55
+
+print('hi ' + name + '. You are ' + str(age) + ' years old')
+print(f'hi {name} You are {age} years old')
+print('hi {}. You are {} years old'.format('Johnny', 55))
+print('hi {}. You are {} years old'.format(name, age))
+print('hi {1}. You are {0} years old'.format(name, age))
+print('hi {new_name}. You are {age} years old'.format(new_name='sally', age=100))
+
+selfish = 'me me me'
+nums = '01234567'
+
+# [start:stop:stepover]
+
+print(selfish[0:2])
+print(nums[0:8:2])
+print(nums[1:])
+print(nums[:5])
+print(nums[::1])
+print(nums[-1])
+print(nums[::-1])
+print(nums[::-2])
+
+# Strings are immutable
+
+# Built-In Functions
+
+greet = 'hellloooo'
+
+print(len(greet))
+print(greet[0:len(greet)])
+
+quote = 'to be or not to be'
+
+print(quote.upper())
+print(quote.capitalize())
+print(quote.find('be'))
+print(quote.replace('be', 'me'))
