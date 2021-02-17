@@ -123,3 +123,61 @@ print(quote.replace('be', 'me'))
 print(bool(1))
 print(bool(0))
 print(bool('false'))
+
+# Lists
+
+li = [1, 2, 3, 4, 5]
+li2 = ['a', 'b', 'c']
+li3 = [1, 2.5, 'a', True]
+amazon_cart = ['notebooks', 'sunglasses']
+print(amazon_cart[0])
+print(amazon_cart[1])
+# print(amazon_cart[2])
+
+# List Slicing
+
+amazon_cart2 = ['notebooks', 'sunglasses', 'toys', 'grapes']
+print(amazon_cart2[0::2])
+print(amazon_cart2[0:2:1])
+
+amazon_cart2[0] = 'laptop'
+new_cart = amazon_cart2[:]
+new_cart[0] = 'gum'
+# print(amazon_cart2[0:3])
+print(new_cart)
+print(amazon_cart2)
+
+# Matrix
+
+matrix = [
+    [1,2,3],
+    [2,4,6],
+    [7,8,9],
+]
+# matrix[0][1] = 2
+
+basket = [1,2,3,4,5]
+
+# adding
+# new_list = basket.append(100)
+basket.append(100)
+basket.insert(3,100)
+basket.extend([200, 300])
+# print(new_list)
+print(basket)
+
+# removing
+basket.pop()
+print(basket)
+basket.pop(0)
+print(basket)
+basket.remove(200)
+print(basket)
+
+basket2 = [1,2,3,4,5]
+new_basket2 = basket2.pop(1)
+print(new_basket2)
+
+new_basket3 = basket2.clear()
+print(new_basket3)
+print(basket2)
