@@ -181,3 +181,41 @@ print(new_basket2)
 new_basket3 = basket2.clear()
 print(new_basket3)
 print(basket2)
+
+# find (index)
+
+print(basket.index(100))
+print(basket.index(100, 0, 3))
+# print(basket.index(100, 3, 5))
+
+print(100 in basket)
+print(basket.count(100))
+# basket.sort()
+print(sorted(basket))
+print(basket)
+
+basket.reverse()
+print(basket)
+
+basket.sort()
+basket.reverse()
+print(basket[::-1])
+print(basket)
+
+# print(range(1,100))
+# print(list(range(1,100)))
+
+sentence = ' '
+new_sentence = sentence.join(['Hi', 'my', 'name', 'is', 'Pete'])
+print(sentence)
+print(new_sentence)
+
+# list unpacking
+
+a,b,c, *other, d = [1,2,3,4,5,6,7,8,9]
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(other)
