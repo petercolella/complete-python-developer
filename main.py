@@ -106,3 +106,47 @@ for i,char in enumerate('Helllooo'):
 for i,char in enumerate(list(range(100))):
     if char == 50:
         print(i)
+
+# While Loop
+
+i = 0
+while i < 10:
+    i += 1
+    print(i)
+    # break
+else:
+    print('done with the work')
+
+my_list = [1,2,3]
+for item in my_list:
+    print(item)
+
+i = 0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+
+while True:
+    input('say something: ')
+    break
+
+while True:
+    response = input('say sonething: ')
+    if (response == 'bye'):
+        break
+
+print('-------')
+my_list = [1,2,3]
+for item in my_list:
+    pass # continue
+    print(item)
+
+i = 0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+    pass # continue
+
+for item in my_list:
+    pass # continue
+    # print(item)
