@@ -15,10 +15,13 @@ picture = [
 #             picture[i][j] = ' '
 #     print(''.join(row))
 
+# for row in picture:
+#     for j, num in enumerate(row):
+#         if bool(num):
+#             row[j] = '*'
+#         else:
+#             row[j] = ' '
+#     print(''.join(row))
+
 for row in picture:
-    for j, num in enumerate(row):
-        if bool(num):
-            row[j] = '*'
-        else:
-            row[j] = ' '
-    print(''.join(row))
+    print(''.join(['*' if num else ' ' for num in row]))
