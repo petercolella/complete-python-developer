@@ -7,10 +7,18 @@ picture = [
     [0,0,0,1,0,0,0],
 ]
 
-for i, row in enumerate(picture):
+# for i, row in enumerate(picture):
+#     for j, num in enumerate(row):
+#         if bool(num):
+#             picture[i][j] = '*'
+#         else:
+#             picture[i][j] = ' '
+#     print(''.join(row))
+
+for row in picture:
     for j, num in enumerate(row):
         if bool(num):
-            picture[i][j] = '*'
+            row[j] = '*'
         else:
-            picture[i][j] = ' '
+            row[j] = ' '
     print(''.join(row))
