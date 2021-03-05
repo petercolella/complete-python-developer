@@ -25,3 +25,17 @@ picture = [
 
 for row in picture:
     print(''.join(['*' if num else ' ' for num in row]))
+
+# Clean
+# Readable
+# Predictable
+# DRY
+
+
+for row in picture:
+    for num in row:
+        if num:
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print('')
