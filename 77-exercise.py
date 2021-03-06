@@ -11,4 +11,6 @@ some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 #     temp_list.remove(el)
 # print(temp_list)
 
-print([el for el in set(some_list) if some_list.count(el) > 1])
+# print([el for el in set(some_list) if some_list.count(el) > 1])
+
+print(list(filter(lambda el: some_list.count(el) > 1, set(some_list))))
