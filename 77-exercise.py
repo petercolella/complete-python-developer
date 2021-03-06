@@ -13,4 +13,12 @@ some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 
 # print([el for el in set(some_list) if some_list.count(el) > 1])
 
-print(list(filter(lambda el: some_list.count(el) > 1, set(some_list))))
+# print(list(filter(lambda el: some_list.count(el) > 1, set(some_list))))
+
+duplicates = []
+for value in some_list:
+    if some_list.count(value) > 1:
+        if value not in duplicates:
+            duplicates.append(value)
+
+print(duplicates)
