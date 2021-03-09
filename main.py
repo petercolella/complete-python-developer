@@ -126,14 +126,14 @@ while i < len(my_list):
     print(my_list[i])
     i += 1
 
-while True:
-    input('say something: ')
-    break
+# while True:
+#     input('say something: ')
+#     break
 
-while True:
-    response = input('say sonething: ')
-    if (response == 'bye'):
-        break
+# while True:
+#     response = input('say sonething: ')
+#     if (response == 'bye'):
+#         break
 
 print('-------')
 my_list = [1,2,3]
@@ -150,3 +150,58 @@ while i < len(my_list):
 for item in my_list:
     pass # continue
     # print(item)
+
+# Functions
+
+def say_hello():
+    print('Hello!')
+
+say_hello()
+
+picture = [
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0],
+]
+
+def show_tree():
+    for row in picture:
+        print(''.join(['*' if num else ' ' for num in row]))
+
+show_tree()
+
+def say_hello_args(name, emoji):
+    print(f'Hello, {name} {emoji}!')
+
+# positional arguments
+say_hello_args('Peter', '😀')
+
+# keyword arguments
+say_hello_args(emoji='😀', name='Peter')
+
+# default parameters
+def say_hello_default(name='Joe', emoji='😡'):
+    print(f'Hello, {name} {emoji}!')
+
+say_hello_default()
+say_hello_default('Mama')
+
+# return
+def add_two(num1, num2):
+    return num1 + num2
+
+print(add_two(4,5))
+
+total = add_two(6,7)
+print(total)
+print(add_two(10,add_two(8,9)))
+
+def add_two_outer(num1, num2):
+    def add_two_inner(a, b):
+        return a + b
+    return add_two_inner(num1, num2)
+
+print(add_two_outer(10,11))
