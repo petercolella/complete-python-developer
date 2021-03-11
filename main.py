@@ -205,3 +205,60 @@ def add_two_outer(num1, num2):
     return add_two_inner(num1, num2)
 
 print(add_two_outer(10,11))
+
+# Docstrings
+
+def test(a):
+    '''
+    Info: this function tests and prints param a
+    '''
+    print(a)
+
+test('!!!')
+
+# help(test)
+print(test.__doc__)
+
+# Clean Code
+
+# def is_even(num):
+#     if num % 2 == 0:
+#         return True
+#     elif num % 2 != 0:
+#         return False
+
+# def is_even(num):
+#     if num % 2 == 0:
+#         return True
+#     return False
+
+def is_even(num):
+    return num % 2 == 0
+
+print(is_even(3))
+
+# *args **kwargs
+
+def super_func(*args, **kwargs):
+    # print(*args)
+    # print(args)
+    total = 0
+    print(kwargs)
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total
+
+print(super_func(1,2,3,4,5, num1=5, num2=10))
+
+# Rule: params, *args, default parameters, **kwargs
+
+def super_func_rule(name, *args, i='Hey', **kwargs):
+    # print(*args)
+    # print(args)
+    total = 0
+    print(f'{i} {name}')
+    for items in kwargs.values():
+        total += items
+    return sum(args) + total
+
+print(super_func_rule('Joe', 1,2,3,4,5, num1=5, num2=10))
