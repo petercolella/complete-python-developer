@@ -262,3 +262,17 @@ def super_func_rule(name, *args, i='Hey', **kwargs):
     return sum(args) + total
 
 print(super_func_rule('Joe', 1,2,3,4,5, num1=5, num2=10))
+
+# Walrus Operator
+
+a = 'hellooooo'
+
+if (len(a) > 5):
+    print(f'too long {len(a)} elements')
+
+if ((n := len(a)) > 5):
+    print(f'too long {n} elements')
+
+while ((n := len(a)) > 1):
+    print(a, n)
+    a = a[:-1]
