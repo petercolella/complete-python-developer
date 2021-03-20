@@ -77,3 +77,114 @@ print(player4.age)
 print(player4.name)
 print(player4)
 print(player4.adding_things2(5, 6))
+
+# 122. Developer Fundamentals: V
+
+class PlayerCharacterSelf:
+    # Class Object Attribute
+    membership = True
+    def __init__(self, name='anonymous', age=0):
+        self.name = name # attributes
+        self.age = age
+
+    def run(self):
+        return self
+
+    def speak(self):
+        print(f'My name is {self.name}, and I am {self.age} years old.')
+
+player5 = PlayerCharacterSelf('Test', 1)
+print(player5.run())
+print(player5.run().run())
+
+# 123. Encapsulation
+
+player5.speak()
+
+player6 = {'name': 'Peter', 'age': 57}
+print(player6['name'])
+print(player6['age'])
+
+# 124. Abstraction
+
+player5.name = '!!!'
+# player5.speak = 'BOOO'
+
+# player5.speak()
+
+# 125. Private vs Public Variables
+
+class PlayerCharacterPrivate:
+    # Class Object Attribute
+    membership = True
+    def __init__(self, name='anonymous', age=0):
+        self._name = name # attributes
+        self._age = age
+
+    def run(self):
+        return self
+
+    def speak(self):
+        print(f'My name is {self._name}, and I am {self._age} years old.')
+
+player7 = PlayerCharacterPrivate('Peter', 100)
+player7.speak()
+
+player7.name = 'Joe'
+print(player7.name)
+player7.speak()
+
+# player7.speak = '!!!'
+# print(player7.speak)
+
+# 126. Inheritance
+
+class User:
+    def sign_in(self):
+        print('logged in')
+
+    def attack(self):
+        print('do nothing')
+
+class Wizard(User):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        User.attack(self)
+        print(f'attacking with power of {self.power}')
+
+class Archer(User):
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
+
+    def attack(self):
+        print(f'attacking with arrows: arrows left - {self.num_arrows}')
+
+wizard1 = Wizard('Merlin', 50)
+archer1 = Archer('Robin', 100)
+wizard1.attack()
+archer1.attack()
+
+# 127. Inheritance 2
+
+print(isinstance(wizard1, Wizard))
+print(isinstance(wizard1, User))
+print(isinstance(wizard1, object))
+
+# 128. Polymorphism
+
+def player_attack(character):
+    character.attack()
+
+player_attack(wizard1)
+
+user1 = User()
+
+print('------------')
+
+for character in [wizard1, archer1, user1]:
+    player_attack(character)
+    character.attack()
