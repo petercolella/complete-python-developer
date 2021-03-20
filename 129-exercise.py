@@ -31,13 +31,9 @@ class Felix(Cat):
         return f'{sounds}'
 
 #2 Create a list of all of the pets (create 3 cat instances from the above)
-simon = Simon('Simon', 2)
-sally = Sally('Sally', 3)
-felix = Felix('Felix', 4)
-my_cats = [simon, sally, felix]
+my_cats = [Simon('Simon', 2), Sally('Sally', 3), Felix('Felix', 4)]
 
 #3 Instantiate the Pet class with all your cats use variable my_pets
 my_pets = Pets(my_cats)
 #4 Output all of the cats walking using the my_pets instance
-for cat in my_pets.animals:
-    print(cat.walk())
+my_pets.walk()
