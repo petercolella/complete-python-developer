@@ -2,8 +2,10 @@
 class User(object):
     def __init__(self, email):
         self.email = email
+
     def sign_in(self):
         print('logged in')
+
 
 class Wizard(User):
     def __init__(self, name, power, email):
@@ -14,6 +16,7 @@ class Wizard(User):
     def attack(self):
         print(f'attacking with power of {self.power}')
 
+
 wizard1 = Wizard('Merlin', 50, 'wizard@wizard.com')
 print(wizard1.email)
 
@@ -22,6 +25,7 @@ print(wizard1.email)
 # print(dir(wizard1))
 
 # Dunder Methods
+
 
 class Toy():
     def __init__(self, color, age):
@@ -46,6 +50,7 @@ class Toy():
 
     def __getitem__(self, i):
         return self.my_dict[i]
+
 
 action_figure = Toy('red', 0)
 print(action_figure.__str__())
