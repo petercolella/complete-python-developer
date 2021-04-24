@@ -1,7 +1,5 @@
 from functools import reduce
-name = input('What is your name?')
 
-print('Hello, ' + name)
 # Fundamental Data Types
 int
 float
