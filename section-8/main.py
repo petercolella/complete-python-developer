@@ -1,5 +1,8 @@
 # 150. Decorators
 
+from time import time
+
+
 def hello():
     print('hello')
 
@@ -90,3 +93,24 @@ print('4-----4')
 
 hello_with_greeting('hiii')
 hello_with_greeting_emoji('hiii', ':)')
+
+# 154. Why Do We Need Decorators
+
+
+def performance(fn):
+    def wrapper(*args, **kwargs):
+        t1 = time()
+        result = fn(*args, **kwargs)
+        t2 = time()
+        print(f'Duration of function: {t2 - t1} seconds')
+        return result
+    return wrapper
+
+
+@performance
+def long_time():
+    for i in range(100000000):
+        i*5
+
+
+long_time()
