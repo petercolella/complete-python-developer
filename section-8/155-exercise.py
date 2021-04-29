@@ -9,9 +9,11 @@ user1 = {
 def authenticated(fn):
   # code here
     def wrapper(*args, **kwargs):
-        for arg in args:
-            if (arg['valid']):
-                fn(*args, **kwargs)
+        # for arg in args:
+        #     if (arg['valid']):
+        #         fn(*args, **kwargs)
+        if args[0]['valid']:
+            return fn(*args, **kwargs)
     return wrapper
 
 
