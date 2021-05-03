@@ -71,3 +71,43 @@ def divide(num1, num2):
 
 
 print(divide(1, 0))
+
+# 159. Exercises: Error Handling
+
+while True:
+    try:
+        age = int(input('What is your age?'))
+        10/age
+        print(age)
+    except ValueError:
+        print('Please enter a number.')
+        continue
+    except ZeroDivisionError:
+        print('Please enter age above zero.')
+        break
+    else:
+        print('Thank you!')
+        break
+    finally:
+        print('OK, I am finally done')
+    print('Can you hear me?')
+
+# 160. Error Handling 3
+
+while True:
+    try:
+        age = int(input('What is your age?'))
+        10/age
+        raise ValueError('raise: ValueError')
+    # except ValueError:
+    #     print('Please enter a number.')
+    #     continue
+    except ZeroDivisionError:
+        print('Please enter age above zero.')
+        break
+    else:
+        print('Thank you!')
+        # break
+    finally:
+        print('OK, I am finally done')
+    print('Can you hear me?')
